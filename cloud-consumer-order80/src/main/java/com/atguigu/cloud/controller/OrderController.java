@@ -31,8 +31,11 @@ public class OrderController{
     // 删除+修改操作作为家庭作业，O(∩_∩)O。。。。。。。
     @GetMapping("/consumer/pay/get/{id}")
     public ResultData getPayInfo(@PathVariable("id") Integer id){
-        return restTemplate.getForObject(PaymentSrv_URL + "/pay/get/"+id, ResultData.class, id);
+        return restTemplate.getForObject(PaymentSrv_URL + "/pay/get"+id, ResultData.class, id);
     }
 
-
+    @GetMapping("/consumer/pay/get/info")
+    public String getInfo(){
+        return restTemplate.getForObject(PaymentSrv_URL+"/pay/get/info",String.class);
+    }
 }

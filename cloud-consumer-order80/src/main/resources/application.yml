@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-payment-service
+    name: cloud-consumer-order
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
